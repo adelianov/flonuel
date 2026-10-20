@@ -1,0 +1,723 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.pesanan-container {
+    width: min(1200px, calc(100% - 64px));
+    margin: 0 auto;
+    padding: 36px 0 60px;
+    color: #292323;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-heading {
+    margin-bottom: 28px;
+}
+
+.page-kicker {
+    display: block;
+    margin-bottom: 8px;
+    color: #d86673;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.page-heading h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(25px, 2.5vw, 34px);
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.page-heading p {
+    margin-top: 8px;
+    color: #817577;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.pesanan-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-bottom: 32px;
+}
+
+.pesanan-stat-card {
+    min-height: 110px;
+    padding: 22px 24px;
+    background: #fff0f1;
+    border: 1px solid #f5dfe1;
+    border-radius: 14px;
+    box-shadow: 0 3px 7px rgba(50, 35, 35, 0.07);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.pesanan-stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(50, 35, 35, 0.09);
+}
+
+.pesanan-stat-content {
+    min-width: 0;
+}
+
+.pesanan-stat-content span {
+    display: block;
+    color: #625557;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.pesanan-stat-content strong {
+    display: block;
+    margin-top: 7px;
+    color: #211b1c;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.pesanan-stat-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+.pesanan-stat-icon.pink {
+    background: #ffe0e3;
+    color: #d86673;
+}
+
+.pesanan-stat-icon.green {
+    background: #e8f5ec;
+    color: #609a70;
+}
+
+.pesanan-section {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #eee5e5;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(50, 35, 35, 0.04);
+}
+
+.pesanan-section-header {
+    min-height: 84px;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    border-bottom: 1px solid #eee7e7;
+}
+
+.section-heading-left {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-width: 0;
+}
+
+.section-heading-icon {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    border-radius: 11px;
+    background: #fff0f1;
+    color: #d86673;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+}
+
+.section-heading-left span {
+    display: block;
+    color: #a09294;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.section-heading-left h2 {
+    margin-top: 5px;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 600;
+    color: #292323;
+}
+
+.total-data {
+    flex-shrink: 0;
+    padding: 8px 12px;
+    background: #fff3f4;
+    border-radius: 20px;
+    color: #d86673;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.pesanan-table {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
+}
+
+.pesanan-table thead {
+    background: #faf7f7;
+}
+
+.pesanan-table th {
+    height: 52px;
+    padding: 14px 16px;
+    color: #65595b;
+    text-align: left;
+    font-size: 11px;
+    line-height: 1.4;
+    font-weight: 700;
+    letter-spacing: .35px;
+    white-space: nowrap;
+    border-bottom: 1px solid #eee6e6;
+}
+
+.pesanan-table td {
+    padding: 18px 16px;
+    min-height: 70px;
+    color: #4d4445;
+    font-size: 13px;
+    line-height: 1.5;
+    vertical-align: middle;
+    border-bottom: 1px solid #f1ebeb;
+}
+
+.pesanan-table tbody tr {
+    transition: background .15s ease;
+}
+
+.pesanan-table tbody tr:hover {
+    background: #fffafb;
+}
+
+.pesanan-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.col-no {
+    width: 65px;
+}
+
+.number-column {
+    text-align: center;
+    color: #817779 !important;
+    font-size: 13px !important;
+}
+
+.order-code {
+    min-width: 135px;
+}
+
+.order-code strong {
+    display: block;
+    color: #302728;
+    font-size: 12px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.order-code span {
+    display: block;
+    margin-top: 5px;
+    color: #8d8183;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+.customer-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 130px;
+}
+
+.customer-avatar {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #fff0f1;
+    color: #d86673;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.customer-name span {
+    color: #403738;
+    font-size: 13px;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+
+
+.order-date {
+    color: #65595b;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.order-total {
+    color: #393031;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.order-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    padding: 8px 11px;
+    border-radius: 20px;
+
+    font-size: 11px;
+    line-height: 1.4;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.order-status.waiting {
+    background: #fff4e6;
+    color: #b67b36;
+}
+
+.order-status.verification {
+    background: #edf4ff;
+    color: #537fb4;
+}
+
+.order-status.processing {
+    background: #edf1fb;
+    color: #657ba9;
+}
+
+.order-status.making {
+    background: #f4eff9;
+    color: #856fa4;
+}
+
+.order-status.ready {
+    background: #fff3df;
+    color: #b98039;
+}
+
+.order-status.success {
+    background: #edf7f0;
+    color: #568b63;
+}
+
+.order-status.cancelled {
+    background: #fff0f1;
+    color: #c45662;
+}
+
+
+
+.detail-button {
+    min-height: 36px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: #fff0f1;
+    color: #cf5f6b;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+
+    transition: background .2s ease, color .2s ease;
+}
+
+.detail-button:hover {
+    background: #e77d88;
+    color: #fff;
+}
+
+
+.empty-pesanan {
+    min-height: 300px;
+    padding: 40px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.empty-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+    border-radius: 50%;
+    background: #fff0f1;
+    color: #e07982;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+.empty-pesanan h3 {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.empty-pesanan p {
+    margin-top: 8px;
+    color: #928688;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    .pesanan-container {
+        width: calc(100% - 40px);
+        padding-top: 30px;
+    }
+
+    .pesanan-stats {
+        gap: 16px;
+    }
+
+    .pesanan-stat-card {
+        padding: 20px;
+    }
+
+    .pesanan-table {
+        min-width: 880px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pesanan-container {
+        width: calc(100% - 28px);
+        padding-top: 24px;
+        padding-bottom: 35px;
+    }
+
+    .page-heading {
+        margin-bottom: 22px;
+    }
+
+    .page-kicker {
+        font-size: 10px;
+    }
+
+    .page-heading h1 {
+        font-size: 25px;
+    }
+
+    .page-heading p {
+        font-size: 13px;
+    }
+
+    .pesanan-stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .pesanan-stat-card {
+        min-height: 95px;
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    .pesanan-stat-content span {
+        font-size: 14px;
+    }
+
+    .pesanan-stat-content strong {
+        font-size: 27px;
+    }
+
+    .pesanan-stat-icon {
+        width: 43px;
+        height: 43px;
+        font-size: 16px;
+    }
+
+    .pesanan-section-header {
+        min-height: 76px;
+        padding: 14px;
+    }
+
+    .section-heading-left {
+        gap: 10px;
+    }
+
+    .section-heading-icon {
+        width: 37px;
+        height: 37px;
+        font-size: 14px;
+    }
+
+    .section-heading-left span {
+        font-size: 9px;
+    }
+
+    .section-heading-left h2 {
+        font-size: 17px;
+    }
+
+    .total-data {
+        padding: 7px 9px;
+        font-size: 10px;
+    }
+
+    .pesanan-table {
+        min-width: 880px;
+    }
+
+    .pesanan-table th {
+        height: 48px;
+        padding: 12px;
+        font-size: 10px;
+    }
+
+    .pesanan-table td {
+        padding: 15px 12px;
+        font-size: 12px;
+    }
+
+    .order-code strong {
+        font-size: 11px;
+    }
+
+    .customer-name span {
+        font-size: 12px;
+    }
+
+    .order-status {
+        font-size: 10px;
+    }
+
+    .detail-button {
+        min-height: 34px;
+        font-size: 11px;
+    }
+
+    .empty-pesanan h3 {
+        font-size: 19px;
+    }
+
+    .empty-pesanan p {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 360px) {
+    .pesanan-container {
+        width: calc(100% - 22px);
+    }
+
+    .page-heading h1 {
+        font-size: 22px;
+    }
+
+    .pesanan-stat-card {
+        padding: 15px;
+    }
+
+    .pesanan-stat-content span {
+        font-size: 13px;
+    }
+
+    .section-heading-left h2 {
+        font-size: 15px;
+    }
+
+    .total-data {
+        font-size: 9px;
+    }
+}
+
+
+.status-alert {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.status-alert.success {
+    color: #166534;
+    background: #dcfce7;
+    border: 1px solid #bbf7d0;
+}
+
+.status-alert.error {
+    color: #991b1b;
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+}
+
+.status-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 165px;
+}
+
+.status-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ead5df;
+    border-radius: 8px;
+    background: #fff;
+    color: #49313c;
+    font-family: inherit;
+    font-size: 12px;
+    outline: none;
+    cursor: pointer;
+}
+
+.status-select:focus {
+    border-color: #d63384;
+    box-shadow: 0 0 0 3px rgba(214, 51, 132, 0.1);
+}
+
+.status-save {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 8px;
+    background: #d63384;
+    color: #fff;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.status-save:hover {
+    background: #b82b6f;
+}
+
+/* Ruang untuk kolom aksi pada tabel */
+.pesanan-table th,
+.pesanan-table td {
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .status-form {
+        min-width: 155px;
+    }
+
+    .status-select,
+    .status-save {
+        font-size: 12px;
+    }
+}
+
+/* TOMBOL WHATSAPP CUSTOMER */
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.whatsapp-button:hover {
+    background: #1da851;
+    color: #fff;
+}
+
+.whatsapp-button i {
+    font-size: 16px;
+}
+
+.whatsapp-unavailable,
+.whatsapp-pending {
+    display: inline-block;
+    color: #777;
+    font-size: 11px;
+    line-height: 1.5;
+    max-width: 130px;
+}
+
+.whatsapp-unavailable {
+    color: #b42318;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-button {
+        padding: 9px 10px;
+    }
+}

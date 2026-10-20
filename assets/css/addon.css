@@ -1,0 +1,783 @@
+
+:root {
+
+    --pink: #f38f95;
+    --pink-dark: #e77d85;
+    --pink-light: #fff1f3;
+
+    --text: #222222;
+    --gray: #777777;
+    --border: #eeeeee;
+
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #ffffff;
+
+    color: var(--text);
+
+}
+
+.addon-page {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    background: #ffffff;
+
+}
+
+.addon-header {
+
+    width: 100%;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--pink);
+
+}
+
+
+.addon-header h1 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    letter-spacing: .5px;
+
+}
+
+.addon-container {
+
+    width: 100%;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 26px 30px 38px;
+
+}
+
+.addon-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 28px 34px;
+
+}
+
+
+.addon-card {
+
+    position: relative;
+
+    display: block;
+
+    min-width: 0;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    border-radius: 8px;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+
+}
+
+
+.addon-card:hover {
+
+    transform: translateY(-3px);
+
+}
+
+.addon-card > input[type="checkbox"] {
+
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+}
+
+.addon-card-content {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    min-height: 190px;
+
+    padding: 5px 5px 10px;
+
+}
+
+.addon-image {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 108px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 9px;
+
+    overflow: hidden;
+
+}
+
+
+.addon-image img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    transition:
+        transform .25s ease;
+
+}
+
+
+.addon-card:hover
+.addon-image img {
+
+    transform: scale(1.05);
+
+}
+
+.addon-image-placeholder {
+
+    display: none;
+
+    width: 100%;
+
+    height: 100%;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #cccccc;
+
+    font-size: 35px;
+
+}
+
+.addon-name {
+
+    width: 100%;
+
+    min-height: 29px;
+
+    color: #222222;
+
+    font-size: 10px;
+
+    line-height: 1.35;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+}
+
+.addon-detail {
+
+    width: 100%;
+
+    min-height: 27px;
+
+    margin-top: 1px;
+
+    color: #222222;
+
+    font-size: 10px;
+
+    line-height: 1.35;
+
+}
+
+
+.addon-detail.empty {
+
+    visibility: hidden;
+
+}
+
+.addon-price {
+
+    margin-top: 4px;
+
+    color: #222222;
+
+    font-size: 10px;
+
+    line-height: 1.3;
+
+    font-weight: 700;
+
+}
+
+.addon-check {
+
+    position: absolute;
+
+    top: 4px;
+
+    right: 4px;
+
+    width: 22px;
+
+    height: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    border: 1.5px solid #dddddd;
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    opacity: 0;
+
+    transform: scale(.7);
+
+    transition:
+        opacity .2s ease,
+        transform .2s ease,
+        background .2s ease,
+        border-color .2s ease;
+
+}
+
+
+.addon-card.selected {
+
+    background: var(--pink-light);
+
+}
+
+
+.addon-card.selected
+.addon-check {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+    background: var(--pink);
+
+    border-color: var(--pink);
+
+}
+
+.addon-card.selected
+.addon-image img {
+
+    transform: scale(1.04);
+
+}
+
+
+.addon-summary {
+
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 13px 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-top: 1px solid #eeeeee;
+
+    border-bottom: 1px solid #eeeeee;
+
+}
+
+
+.summary-left,
+.summary-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+}
+
+
+.summary-right {
+
+    justify-content: flex-end;
+
+}
+
+
+.summary-label {
+
+    color: #777777;
+
+    font-size: 11px;
+
+}
+
+
+.summary-count {
+
+    padding: 4px 9px;
+
+    border-radius: 20px;
+
+    background: var(--pink-light);
+
+    color: var(--pink-dark);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+.summary-right strong {
+
+    color: var(--pink-dark);
+
+    font-size: 14px;
+
+}
+
+.addon-action {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+}
+
+.back-button {
+
+    min-width: 125px;
+
+    height: 36px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 0 16px;
+
+    border-radius: 5px;
+
+    background: #ffffff;
+
+    border: 1px solid #dddddd;
+
+    color: #777777;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    transition:
+        background .2s ease,
+        color .2s ease;
+
+}
+
+
+.back-button:hover {
+
+    background: #f7f7f7;
+
+    color: #444444;
+
+}
+
+
+.continue-button {
+
+    min-width: 182px;
+
+    height: 36px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 18px;
+
+    border: 0;
+
+    border-radius: 5px;
+
+    background: var(--pink);
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 3px 7px rgba(231, 125, 133, .25);
+
+    transition:
+        background .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+.continue-button:hover {
+
+    background: var(--pink-dark);
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(231, 125, 133, .30);
+
+}
+
+
+.continue-button:active {
+
+    transform: translateY(0);
+
+}
+
+@media (max-width: 900px) {
+
+    .addon-container {
+
+        padding-left: 25px;
+
+        padding-right: 25px;
+
+    }
+
+
+    .addon-grid {
+
+        grid-template-columns:
+            repeat(4, 1fr);
+
+        gap: 25px 22px;
+
+    }
+
+
+    .addon-image {
+
+        height: 105px;
+
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .addon-header {
+
+        height: 55px;
+
+    }
+
+
+    .addon-header h1 {
+
+        font-size: 19px;
+
+    }
+
+
+    .addon-container {
+
+        padding:
+            22px
+            18px
+            35px;
+
+    }
+
+
+    .addon-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 24px 16px;
+
+    }
+
+
+    .addon-image {
+
+        height: 95px;
+
+    }
+
+
+    .addon-card-content {
+
+        min-height: 175px;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .addon-header {
+
+        height: 52px;
+
+    }
+
+
+    .addon-header h1 {
+
+        font-size: 17px;
+
+    }
+
+
+    .addon-container {
+
+        padding:
+            20px
+            12px
+            30px;
+
+    }
+
+
+    .addon-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 22px 15px;
+
+    }
+
+
+    .addon-image {
+
+        height: 110px;
+
+    }
+
+
+    .addon-card-content {
+
+        min-height: 175px;
+
+    }
+
+
+    .addon-name {
+
+        font-size: 10px;
+
+    }
+
+
+    .addon-detail {
+
+        font-size: 9px;
+
+    }
+
+
+    .addon-price {
+
+        font-size: 10px;
+
+    }
+
+
+    .addon-summary {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 10px;
+
+    }
+
+
+    .summary-left,
+    .summary-right {
+
+        justify-content: space-between;
+
+    }
+
+
+    .addon-action {
+
+        flex-direction: column-reverse;
+
+        width: 100%;
+
+    }
+
+
+    .back-button,
+    .continue-button {
+
+        width: 100%;
+
+        max-width: 300px;
+
+    }
+
+}
+
+@media (max-width: 350px) {
+
+    .addon-grid {
+
+        gap: 18px 10px;
+
+    }
+
+
+    .addon-image {
+
+        height: 90px;
+
+    }
+
+
+    .addon-card-content {
+
+        min-height: 160px;
+
+    }
+
+
+    .addon-name {
+
+        font-size: 9px;
+
+    }
+
+
+    .addon-detail {
+
+        font-size: 8px;
+
+    }
+
+
+    .addon-price {
+
+        font-size: 9px;
+
+    }
+
+}

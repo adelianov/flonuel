@@ -1,0 +1,386 @@
+
+
+.produk-page {
+    padding-top: 28px;
+    padding-bottom: 35px;
+}
+
+.produk-section-title {
+    margin-top: 30px;
+}
+
+.produk-statistics {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-bottom: 28px;
+}
+
+.produk-alert {
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    border: 1px solid #f2c6da;
+    border-radius: 10px;
+    background: #fff0f6;
+    color: #a61e5c;
+    font-size: 13px;
+}
+
+.produk-table-card {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #f1e5eb;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(70, 30, 50, 0.04);
+}
+
+.produk-table-header {
+    padding: 24px 24px 16px;
+}
+
+.produk-eyebrow {
+    color: #d63384;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.produk-table-header h2 {
+    margin: 8px 0;
+    color: #35242d;
+    font-size: 20px;
+}
+
+.produk-table-header p {
+    margin: 0;
+    color: #8b7782;
+    font-size: 13px;
+}
+
+/* SEARCH */
+
+.produk-filter {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 18px 24px;
+    border-top: 1px solid #f5eaf0;
+    border-bottom: 1px solid #f5eaf0;
+}
+
+.produk-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 220px;
+    padding: 0 13px;
+    border: 1px solid #e9dce4;
+    border-radius: 9px;
+    color: #a08b96;
+}
+
+.produk-search:focus-within {
+    border-color: #d63384;
+    box-shadow: 0 0 0 3px rgba(214, 51, 132, .08);
+}
+
+.produk-search input {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 0;
+    border: 0;
+    outline: 0;
+    color: #35242d;
+    background: transparent;
+    font-size: 13px;
+}
+
+.produk-filter select {
+    min-width: 180px;
+    max-width: 100%;
+    padding: 12px;
+    border: 1px solid #e9dce4;
+    border-radius: 9px;
+    background: #fff;
+    color: #55414b;
+    font-size: 13px;
+    outline: none;
+}
+
+.produk-btn-filter,
+.produk-btn-reset {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.produk-btn-filter {
+    background: #d63384;
+    color: #fff;
+}
+
+.produk-btn-filter:hover {
+    background: #b82b6f;
+}
+
+.produk-btn-reset {
+    background: #f7edf2;
+    color: #765769;
+}
+
+.produk-btn-reset:hover {
+    background: #efdee7;
+}
+
+/* TABLE */
+
+.produk-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.produk-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.produk-table thead {
+    background: #fff7fb;
+}
+
+.produk-table th {
+    padding: 15px 17px;
+    color: #806a76;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    white-space: nowrap;
+}
+
+.produk-table td {
+    padding: 15px 17px;
+    border-top: 1px solid #f3e9ee;
+    color: #55414b;
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.produk-table tbody tr:hover {
+    background: #fffbfd;
+}
+
+/* FOTO DAN DESKRIPSI */
+
+.produk-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 255px;
+    max-width: 360px;
+}
+
+.produk-image {
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+}
+
+.produk-image img,
+.produk-image-placeholder {
+    width: 54px;
+    height: 54px;
+    border-radius: 9px;
+    object-fit: cover;
+}
+
+.produk-image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fce7f3;
+    color: #d63384;
+    font-size: 19px;
+}
+
+.produk-info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+    white-space: normal;
+}
+
+.produk-info-text strong {
+    color: #35242d;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.produk-info-text span {
+    color: #9b8791;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.produk-category {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 7px;
+    background: #fce7f3;
+    color: #b82b6f;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.produk-price {
+    color: #b82b6f !important;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* STATUS */
+
+.produk-status {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.produk-status.aktif {
+    background: #d1e7dd;
+    color: #146c43;
+}
+
+.produk-status.nonaktif {
+    background: #f8d7da;
+    color: #b02a37;
+}
+
+/* AKSI */
+
+.produk-actions {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.produk-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.produk-action.edit {
+    background: #e7f0ff;
+    color: #0d6efd;
+}
+
+.produk-action.edit:hover {
+    background: #cfe2ff;
+}
+
+.produk-action.delete {
+    background: #f8d7da;
+    color: #dc3545;
+}
+
+.produk-action.delete:hover {
+    background: #f1aeb5;
+}
+
+/* KOSONG */
+
+.produk-empty {
+    padding: 48px 20px !important;
+    text-align: center;
+    color: #8b7782 !important;
+}
+
+.produk-empty i,
+.produk-empty strong,
+.produk-empty span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.produk-empty i {
+    color: #dba2bd;
+    font-size: 30px;
+}
+
+.produk-empty strong {
+    color: #55414b;
+    font-size: 14px;
+}
+
+.produk-empty span {
+    font-size: 12px;
+}
+
+.produk-footer {
+    padding: 24px 0 0;
+    color: #9b8791;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+    .produk-statistics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .produk-page {
+        padding-top: 20px;
+    }
+
+    .produk-statistics {
+        grid-template-columns: 1fr;
+    }
+
+    .produk-filter {
+        align-items: stretch;
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .produk-search,
+    .produk-filter select,
+    .produk-btn-filter,
+    .produk-btn-reset {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .produk-table-header {
+        padding: 20px 16px;
+    }
+
+    .produk-table th,
+    .produk-table td {
+        padding: 13px;
+    }
+}

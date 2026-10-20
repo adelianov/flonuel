@@ -1,0 +1,715 @@
+
+.pembayaran-container {
+    width: min(1400px, 94%);
+    margin: 0 auto;
+    padding: 38px 0 60px;
+}
+
+.pembayaran-container .page-heading {
+    margin-bottom: 30px;
+}
+
+.pembayaran-container .page-kicker {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #d63384;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.pembayaran-container .page-heading h1 {
+    margin: 0;
+    color: #352631;
+    font-size: clamp(25px, 3vw, 34px);
+    font-weight: 800;
+    letter-spacing: -.7px;
+}
+
+.pembayaran-container .page-heading p {
+    margin: 10px 0 0;
+    color: #8b7c87;
+    font-size: 14px;
+}
+
+.pembayaran-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.pembayaran-stat-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-width: 0;
+    padding: 24px;
+    border: 1px solid #f0e6ed;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 8px 25px rgba(74, 39, 61, .04);
+}
+
+.pembayaran-stat-content span {
+    display: block;
+    margin-bottom: 10px;
+    color: #887986;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.pembayaran-stat-content strong {
+    color: #352631;
+    font-size: 29px;
+    line-height: 1;
+}
+
+.pembayaran-stat-icon {
+    display: grid;
+    place-items: center;
+    width: 49px;
+    height: 49px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    font-size: 19px;
+}
+
+.pembayaran-stat-icon.pink {
+    color: #d63384;
+    background: #fff0f7;
+}
+
+.pembayaran-stat-icon.orange {
+    color: #c17a16;
+    background: #fff5df;
+}
+
+.pembayaran-stat-icon.green {
+    color: #198754;
+    background: #e5f8ed;
+}
+
+.pembayaran-stat-icon.red {
+    color: #d64545;
+    background: #ffeded;
+}
+
+.pembayaran-section {
+    overflow: hidden;
+    border: 1px solid #f0e6ed;
+    border-radius: 17px;
+    background: #fff;
+    box-shadow: 0 8px 30px rgba(74, 39, 61, .04);
+}
+
+.pembayaran-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 25px 27px;
+    border-bottom: 1px solid #f4edf2;
+}
+
+.section-heading-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.section-heading-icon {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    border-radius: 13px;
+    background: #fff0f7;
+    color: #d63384;
+    font-size: 18px;
+}
+
+.section-heading-left > div:last-child > span {
+    color: #d63384;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.section-heading-left h2 {
+    margin: 5px 0 0;
+    color: #352631;
+    font-size: 19px;
+}
+
+.total-data {
+    padding: 9px 13px;
+    border-radius: 20px;
+    color: #b82b6f;
+    background: #fff0f7;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* FILTER */
+
+.payment-filter {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 20px 27px;
+    border-bottom: 1px solid #f4edf2;
+}
+
+.payment-search {
+    position: relative;
+    flex: 1;
+    min-width: 220px;
+}
+
+.payment-search i {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    color: #a18e9c;
+    font-size: 13px;
+}
+
+.payment-search input,
+.payment-filter select {
+    width: 100%;
+    height: 43px;
+    border: 1px solid #e9dfe7;
+    border-radius: 9px;
+    outline: none;
+    background: #fff;
+    color: #493743;
+    font-size: 12px;
+}
+
+.payment-search input {
+    padding: 0 14px 0 39px;
+}
+
+.payment-filter select {
+    width: 190px;
+    padding: 0 12px;
+}
+
+.payment-search input:focus,
+.payment-filter select:focus {
+    border-color: #d63384;
+    box-shadow: 0 0 0 3px rgba(214, 51, 132, .08);
+}
+
+.payment-filter-button,
+.payment-reset-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 43px;
+    padding: 0 17px;
+    border: none;
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.payment-filter-button {
+    color: #fff;
+    background: #d63384;
+}
+
+.payment-filter-button:hover {
+    background: #b82b6f;
+}
+
+.payment-reset-button {
+    color: #6f5d6a;
+    background: #f4eff3;
+}
+
+/* TABEL */
+
+.pembayaran-section .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.pembayaran-table {
+    width: 100%;
+    min-width: 1050px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.pembayaran-table thead {
+    background: #fff8fc;
+}
+
+.pembayaran-table th {
+    padding: 16px 17px;
+    color: #927e8d;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .7px;
+    white-space: nowrap;
+}
+
+.pembayaran-table td {
+    padding: 18px 17px;
+    border-top: 1px solid #f4edf2;
+    color: #554451;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.pembayaran-table tbody tr {
+    transition: background .2s;
+}
+
+.pembayaran-table tbody tr:hover {
+    background: #fffafd;
+}
+
+.number-column {
+    color: #9b8a97 !important;
+}
+
+.payment-order-code strong {
+    display: block;
+    color: #b82b6f;
+    font-size: 12px;
+}
+
+.payment-order-code span,
+.payment-customer span,
+.payment-date-note {
+    display: block;
+    margin-top: 6px;
+    color: #a08f9c;
+    font-size: 10px;
+}
+
+.payment-customer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 150px;
+}
+
+.customer-avatar {
+    display: grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    color: #b82b6f;
+    background: #fce5f1;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.payment-customer strong {
+    display: block;
+    color: #44333f;
+    font-size: 12px;
+}
+
+.payment-amount {
+    color: #453340;
+    white-space: nowrap;
+}
+
+.proof-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 11px;
+    border: 1px solid #f3cfe2;
+    border-radius: 8px;
+    color: #b82b6f;
+    background: #fff4fa;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.proof-button:hover {
+    background: #ffe8f4;
+}
+
+.no-proof {
+    color: #a394a0;
+    font-size: 11px;
+}
+
+.payment-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 10px;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.payment-status .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.payment-status.waiting {
+    color: #ad7112;
+    background: #fff4dc;
+}
+
+.payment-status.success {
+    color: #17814f;
+    background: #e4f8ec;
+}
+
+.payment-status.cancelled {
+    color: #c13a42;
+    background: #ffebec;
+}
+
+.payment-status.processing {
+    color: #426ac2;
+    background: #eaf0ff;
+}
+
+.payment-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 100px;
+}
+
+.payment-actions form {
+    margin: 0;
+}
+
+.verify-button,
+.reject-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: 100%;
+    padding: 9px 10px;
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.verify-button {
+    background: #198754;
+}
+
+.verify-button:hover {
+    background: #146c43;
+}
+
+.reject-button {
+    background: #d94b52;
+}
+
+.reject-button:hover {
+    background: #b92f38;
+}
+
+.payment-processed {
+    color: #8b7c88;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.empty-pembayaran {
+    padding: 65px 20px;
+    text-align: center;
+}
+
+.empty-pembayaran .empty-icon {
+    display: grid;
+    place-items: center;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 17px;
+    border-radius: 22px;
+    color: #d63384;
+    background: #fff0f7;
+    font-size: 28px;
+}
+
+.empty-pembayaran h3 {
+    margin: 0 0 8px;
+    color: #453340;
+    font-size: 18px;
+}
+
+.empty-pembayaran p {
+    margin: 0;
+    color: #988894;
+    font-size: 13px;
+}
+
+/* ALERT */
+
+.payment-alert {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 14px 17px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.payment-alert.success {
+    color: #176c48;
+    background: #e7f8ef;
+}
+
+.payment-alert.error {
+    color: #a62b38;
+    background: #fff0f0;
+}
+
+/* MODAL BUKTI */
+
+.proof-modal {
+    position: fixed;
+    z-index: 3000;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(40, 24, 36, .65);
+}
+
+.proof-modal.show {
+    display: flex;
+}
+
+.proof-modal-content {
+    width: 100%;
+    max-width: 620px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, .2);
+}
+
+.proof-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 23px;
+    border-bottom: 1px solid #f0e6ed;
+}
+
+.proof-modal-header h3 {
+    margin: 0;
+    color: #453340;
+    font-size: 17px;
+}
+
+.proof-modal-header span {
+    display: block;
+    margin-top: 6px;
+    color: #978895;
+    font-size: 12px;
+}
+
+.close-proof {
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 9px;
+    color: #5e4b59;
+    background: #f6eff4;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.proof-image-wrap {
+    padding: 22px;
+    text-align: center;
+}
+
+.proof-image-wrap img {
+    display: block;
+    max-width: 100%;
+    max-height: 60vh;
+    margin: 0 auto;
+    border-radius: 9px;
+    object-fit: contain;
+}
+
+.proof-image-wrap p {
+    color: #c13a42;
+    font-size: 13px;
+}
+
+.proof-modal-footer {
+    padding: 0 22px 22px;
+    text-align: right;
+}
+
+.open-proof-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 15px;
+    border-radius: 9px;
+    color: #fff;
+    background: #d63384;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+/* NAVIGASI MOBILE */
+
+.mobile-menu-button {
+    display: none;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border: 1px solid #f0e1eb;
+    border-radius: 9px;
+    color: #b82b6f;
+    background: #fff;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+    .pembayaran-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .mobile-menu-button {
+        display: inline-grid;
+        place-items: center;
+    }
+
+    .admin-header {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .admin-navigation {
+        display: none;
+        order: 5;
+        width: 100%;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+        padding: 12px 0 5px;
+    }
+
+    .admin-navigation.show {
+        display: flex;
+    }
+
+    .admin-navigation a {
+        padding: 12px;
+        border-radius: 8px;
+    }
+
+    .pembayaran-container {
+        width: 92%;
+        padding-top: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pembayaran-stats {
+        gap: 11px;
+    }
+
+    .pembayaran-stat-card {
+        align-items: flex-start;
+        flex-direction: column-reverse;
+        padding: 15px;
+    }
+
+    .pembayaran-stat-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .pembayaran-stat-content span {
+        font-size: 11px;
+    }
+
+    .pembayaran-stat-content strong {
+        font-size: 24px;
+    }
+
+    .pembayaran-section-header {
+        align-items: flex-start;
+        padding: 18px 15px;
+    }
+
+    .section-heading-icon {
+        width: 39px;
+        height: 39px;
+    }
+
+    .section-heading-left h2 {
+        font-size: 16px;
+    }
+
+    .total-data {
+        padding: 7px 9px;
+        font-size: 10px;
+    }
+
+    .payment-filter {
+        padding: 16px;
+    }
+
+    .payment-search {
+        flex-basis: 100%;
+    }
+
+    .payment-filter select {
+        flex: 1;
+        width: auto;
+        min-width: 140px;
+    }
+
+    .payment-filter-button,
+    .payment-reset-button {
+        padding: 0 12px;
+    }
+
+    .pembayaran-container .page-heading p {
+        line-height: 1.6;
+    }
+}
